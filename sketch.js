@@ -70,7 +70,16 @@ function drawMinute(x_coord, y_coord) {
 
 function drawSecond(x_coord, y_coord, s) {
   
-  fill(190, 150);
-  ellipse(x_coord, y_coord, s/2, s/2);
+  var hourTime = hour();
+
+  if (hourTime < 12) {
+    fill(229, 243, 253);
+  }
+
+  else if (hourTime >= 12) {
+    fill(254, 255, 225);
+  }
+  
+  circle(x_coord, y_coord, s/2);
   
 }
